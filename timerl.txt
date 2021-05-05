@@ -1,0 +1,15 @@
+whatever value is in prescaler , processor speed will be divided with it ( if prescaler = 1600,
+then 16MHz/1600. so previously, the timer would count 16M in 1 sec, now it will count 16M/1600 in 1 sec) 
+
+/*Say timer speed is 10000 after prescale.
+so our timer can count 10000 in one second
+we know in upcount mode the timer start counting from 0 and count upto ARR register value and 
+then give a interrupt
+Now if we put 10000 in ARR register what does that mean?
+-->> it will take 10000/10000 = 1sec for timer to count 10000 and give a interrupt
+Now if we put 1000 in ARR register what does that mean?
+-->> it will take 1000/10000 = 0.1 sec 100 milisec for timer to count 1000 and give a interrupt
+Now if we put 10 in ARR register what does that mean?
+-->> it will take 10/10000 = 0.001 sec 1 milisec for timer to count 10 and give a interrupt
+Now if we put 20000 in ARR register what does that mean?
+-->> it will take 20000/10000 =2sec for timer to count 20000 and give a interrupt*/
