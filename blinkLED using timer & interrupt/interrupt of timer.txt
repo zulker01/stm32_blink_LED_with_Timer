@@ -1,0 +1,3 @@
+TIM6 URS bit -> 1 : TIM6->CR1 |= 0x4;
+TIM6 UDIS bit -> 1 : TIM6->CR1 &= 0x2; // o korte hobe
+TIM6 update interrutp : TIM6->DIER |=0x1;
